@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Groupe 7</title>
+<style>
+body {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #222;
+  background: #fdfdfb;
+}
+h1 { font-size: 28px; margin-bottom: 0; }
+h2 { font-size: 19px; margin-top: 36px; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+.sub { color: #777; margin-top: 4px; }
+code { font-family: Menlo, Consolas, monospace; font-size: 14px; background: #f0f0ec; padding: 1px 4px; }
+table { border-collapse: collapse; font-size: 15px; display: block; overflow-x: auto; }
+td, th { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+th { background: #f0f0ec; }
+.todo { color: #999; }
+a { color: #1a4fa3; }
+footer { margin-top: 50px; font-size: 14px; color: #888; }
+</style>
+</head>
+<body>
+
+<h1>Groupe 7</h1>
+<p class="sub">Cours de cyber défense, UMONS</p>
+
+<p>
+Salut ! On est le groupe 7. On héberge pour l'instant un serveur DNS et un
+serveur web sur notre réseau <code>10.7.0.0/16</code>. Si vous cherchez un
+fournisseur pour ces services, venez nous voir pendant le TP.
+</p>
+
+<h2>Ce qu'on propose</h2>
+<ul>
+  <li><b>DNS</b> : on peut ajouter vos enregistrements (A, CNAME, MX...) dans notre zone ou héberger la vôtre.</li>
+  <li><b>Hébergement web</b> : on met votre site statique en ligne sur notre nginx.</li>
+  <li class="todo">HTTPS, mail, pare-feu : pas encore, on y travaille.</li>
+</ul>
+
+<h2>Nos machines</h2>
+<table>
+  <tr><th>Nom</th><th>IP</th><th>Service</th></tr>
+  <tr><td><code>ns1.group7.umons</code></td><td><code>10.7.255.10</code></td><td>DNS (port 53)</td></tr>
+  <tr><td><code>welcome.group7.umons</code></td><td><code>10.7.255.10</code></td><td>Web (port 80)</td></tr>
+</table>
+
+<p>Pour vérifier que tout marche :</p>
+<p><code>dig welcome.group7.umons</code></p>
+
+<h2>Contact</h2>
+<p>
+Le plus simple c'est de passer nous voir en séance.
+<!-- à compléter : noms des membres, mail... -->
+</p>
+
+<footer>Groupe 7, 2026</footer>
+
+</body>
+</html>
