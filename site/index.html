@@ -30,35 +30,59 @@ footer { margin-top: 50px; font-size: 14px; color: #888; }
 <body>
 
 <h1>Groupe 7</h1>
-<p class="sub">Cours de cyber défense, UMONS</p>
+<p class="sub">Fournisseur d'identité, cours de cyber défense UMONS</p>
 
 <p>
-Salut ! On est le groupe 7. On héberge pour l'instant un serveur DNS et un
-serveur web sur notre réseau <code>10.7.0.0/16</code>. Si vous cherchez un
-fournisseur pour ces services, venez nous voir pendant le TP.
+On est le groupe 7 et on s'occupe de l'identité. Concrètement : vos
+utilisateurs se connectent chez nous une seule fois, et vos services (mail,
+fichiers...) nous demandent qui ils sont au lieu de gérer leurs propres mots
+de passe. Si ça vous intéresse, choisissez-nous comme fournisseur d'identité.
 </p>
 
-<h2>Ce qu'on propose</h2>
-<ul>
-  <li><b>DNS</b> : on peut ajouter vos enregistrements (A, CNAME, MX...) dans notre zone ou héberger la vôtre.</li>
-  <li><b>Hébergement web</b> : on met votre site statique en ligne sur notre nginx.</li>
-  <li class="todo">HTTPS, mail, pare-feu : pas encore, on y travaille.</li>
-</ul>
+<h2>Notre service : connexion unique (SSO)</h2>
+<p>
+On utilise Keycloak, avec OpenID Connect (et SAML si votre appli ne
+parle que ça). Vous pouvez aussi l'utiliser pour de l'autorisation façon
+OAuth 2.0.
+</p>
+<p>
+Le service sera à l'adresse <code>sso.group7.umons</code>. Il est en cours
+d'installation et sera prêt pour la prochaine séance. On mettra ici l'adresse
+de configuration OpenID dès qu'il tourne.
+</p>
+
+<h2>Obtenir un compte</h2>
+<p>
+Venez nous voir en séance avec votre carte d'étudiant. On vérifie votre
+identité, on crée le compte et vous recevez un mot de passe temporaire à
+changer à la première connexion. On ne crée aucun compte sans vérification.
+</p>
+
+<h2>Brancher votre service sur notre SSO</h2>
+<p>
+Demandez-nous un client en séance. On vous donne un <code>client_id</code>,
+un secret et on enregistre vos URL de redirection. Le secret ne passe jamais
+par cette page ni par un canal public.
+</p>
+
+<h2>Traçabilité</h2>
+<p>
+Les connexions et les actions d'administration sont journalisées. On peut
+fournir ces journaux à l'équipe enseignante si elle les demande.
+</p>
 
 <h2>Nos machines</h2>
 <table>
   <tr><th>Nom</th><th>IP</th><th>Service</th></tr>
-  <tr><td><code>ns1.group7.umons</code></td><td><code>10.7.255.10</code></td><td>DNS (port 53)</td></tr>
-  <tr><td><code>welcome.group7.umons</code></td><td><code>10.7.255.10</code></td><td>Web (port 80)</td></tr>
+  <tr><td><code>ns1.group7.umons</code></td><td><code>10.7.255.10</code></td><td>DNS</td></tr>
+  <tr><td><code>welcome.group7.umons</code></td><td><code>10.7.255.10</code></td><td>Cette page</td></tr>
+  <tr class="todo"><td><code>sso.group7.umons</code></td><td><code>10.7.255.11</code></td><td>SSO (bientôt)</td></tr>
 </table>
-
-<p>Pour vérifier que tout marche :</p>
-<p><code>dig welcome.group7.umons</code></p>
 
 <h2>Contact</h2>
 <p>
-Le plus simple c'est de passer nous voir en séance.
-<!-- à compléter : noms des membres, mail... -->
+Romane Sogalow et Louis Pluquet, Master 2 ingénieur civil en informatique
+et gestion. Le plus simple c'est de passer nous voir en séance.
 </p>
 
 <footer>Groupe 7, 2026</footer>
