@@ -46,9 +46,25 @@ parle que ça). Vous pouvez aussi l'utiliser pour de l'autorisation façon
 OAuth 2.0.
 </p>
 <p>
-Le service sera à l'adresse <code>sso.group7.umons</code>. Il est en cours
-d'installation et sera prêt pour la prochaine séance. On mettra ici l'adresse
-de configuration OpenID dès qu'il tourne.
+Le service est en ligne, en HTTPS, à l'adresse
+<a href="https://sso.group7.umons">https://sso.group7.umons</a>. On mettra
+ici l'adresse de configuration OpenID dès que l'espace réservé à votre
+entreprise sera prêt.
+</p>
+
+<h2>Certificat HTTPS</h2>
+<p>
+Nos services (<code>sso.group7.umons</code> et <code>welcome.group7.umons</code>)
+utilisent un certificat signé par la CA du cours. Pour éviter les
+avertissements, installez le certificat de cette CA sur vos machines :
+<a href="ca-root-certificate.pem">ca-root-certificate.pem</a>.
+</p>
+<p>
+Sous Linux : copiez-le dans <code>/usr/local/share/ca-certificates/</code> en
+le renommant en <code>.crt</code>, puis lancez
+<code>sudo update-ca-certificates</code>. Firefox et Thunderbird ont leur
+propre liste : importez-le aussi dans leurs paramètres, section
+« Certificats », onglet « Autorités ».
 </p>
 
 <h2>Obtenir un compte</h2>
@@ -75,8 +91,8 @@ fournir ces journaux à l'équipe enseignante si elle les demande.
 <table>
   <tr><th>Nom</th><th>IP</th><th>Service</th></tr>
   <tr><td><code>ns1.group7.umons</code></td><td><code>10.7.255.10</code></td><td>DNS</td></tr>
-  <tr><td><code>welcome.group7.umons</code></td><td><code>10.7.255.10</code></td><td>Cette page</td></tr>
-  <tr class="todo"><td><code>sso.group7.umons</code></td><td><code>10.7.255.11</code></td><td>SSO (bientôt)</td></tr>
+  <tr><td><code>welcome.group7.umons</code></td><td><code>10.7.255.10</code></td><td>Cette page (HTTPS)</td></tr>
+  <tr><td><code>sso.group7.umons</code></td><td><code>10.7.255.11</code></td><td>SSO (HTTPS)</td></tr>
 </table>
 
 <h2>Contact</h2>
