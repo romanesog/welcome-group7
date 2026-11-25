@@ -1,5 +1,5 @@
 #!/bin/sh
-# Met à jour le site depuis GitHub et le publie dans le dossier servi par nginx.
+# Met à jour le site depuis GitHub et le publie dans le dossier servi par Apache.
 # Usage (sur la VM) : ~/welcome-group7/deploy.sh
 set -e
 cd "$(dirname "$0")"
